@@ -16,6 +16,7 @@ public class Leetcode2 {
     public static int maxProfit(int[] prices) {
         int totalMoney = 0;
         int buyMoney = 0;
+        //买入卖出标志位，true仅可买入，false仅可卖出
         boolean buyOrSell = true;
         if (prices.length > 0){
             for (int i = 0 ; i < prices.length ; i++){
