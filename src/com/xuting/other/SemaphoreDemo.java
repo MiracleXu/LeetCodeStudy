@@ -1,3 +1,5 @@
+package src.com.xuting.other;
+
 import java.util.Date;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.Semaphore;
