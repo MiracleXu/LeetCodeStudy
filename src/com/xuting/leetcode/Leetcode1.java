@@ -1,4 +1,4 @@
-package src.com.xuting.leetCode;
+package src.com.xuting.leetcode;
 
 /**
  * @author Miracle Xu
