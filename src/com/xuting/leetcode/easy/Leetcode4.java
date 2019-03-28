@@ -1,4 +1,4 @@
-package src.com.xuting.leetcode;
+package src.com.xuting.leetcode.easy;
 
 import java.util.HashMap;
 
