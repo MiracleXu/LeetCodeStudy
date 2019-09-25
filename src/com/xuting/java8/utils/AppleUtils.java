@@ -1,5 +1,8 @@
 package src.com.xuting.java8.utils;
 
+import src.com.xuting.java8.service.ApplePredicate;
+import src.com.xuting.java8.service.ApplePrintPredicate;
+import src.com.xuting.java8.service.AppleWeightPredicate;
 import src.com.xuting.java8.vo.Apple;
 
 import java.util.ArrayList;
@@ -27,21 +30,29 @@ public class AppleUtils {
         }
     }
 
-    public static <T> List<T> filter(List<T> inventory, ApplePredicate<T> p){
+    public static <T> List<T> filter(List<T> inventory, ApplePredicate<T> p) {
         List<T> result = new ArrayList<>();
-        for(T t: inventory){
-            if(p.test(t)){
+        for (T t : inventory) {
+            if (p.test(t)) {
                 result.add(t);
             }
         }
         return result;
     }
 
-    public static void prettyPrintApple(List<Apple> inventory, ApplePrintPredicate applePrintPredicate){
-        for(Apple apple: inventory) {
+    public static void prettyPrintApple(List<Apple> inventory, ApplePrintPredicate applePrintPredicate) {
+        for (Apple apple : inventory) {
             String output = applePrintPredicate.print(apple);
             System.out.println(output);
         }
+    }
+
+    public static <T> int weightFilter(List<T> list, AppleWeightPredicate<T> p) {
+        int weighter = 0;
+        for (T t : list) {
+            weighter = p.weighter(t, weighter);
+        }
+        return weighter;
     }
 }
 

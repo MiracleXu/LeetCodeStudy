@@ -1,4 +1,4 @@
-package src.com.xuting.java8.utils;
+package src.com.xuting.java8.service;
 
 import src.com.xuting.java8.vo.Apple;
 

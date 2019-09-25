@@ -1,5 +1,6 @@
 package src.com.xuting.java8.utils;
 
+import src.com.xuting.java8.service.ApplePrintPredicate;
 import src.com.xuting.java8.vo.Apple;
 
 /**
